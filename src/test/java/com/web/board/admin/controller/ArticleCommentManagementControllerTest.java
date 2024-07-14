@@ -1,7 +1,6 @@
 package com.web.board.admin.controller;
 
 import com.web.board.admin.config.SecurityConfig;
-import com.web.board.admin.domain.constant.RoleType;
 import com.web.board.admin.dto.ArticleCommentDto;
 import com.web.board.admin.dto.UserAccountDto;
 import com.web.board.admin.service.ArticleCommentManagementService;
