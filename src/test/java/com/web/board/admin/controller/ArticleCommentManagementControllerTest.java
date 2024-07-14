@@ -1,6 +1,7 @@
 package com.web.board.admin.controller;
 
 import com.web.board.admin.config.SecurityConfig;
+import com.web.board.admin.config.TestSecurityConfig;
 import com.web.board.admin.dto.ArticleCommentDto;
 import com.web.board.admin.dto.UserAccountDto;
 import com.web.board.admin.service.ArticleCommentManagementService;
@@ -15,7 +16,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 import static org.mockito.BDDMockito.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @DisplayName("컨트롤러 - 댓글 관리")
-@Import(SecurityConfig.class)
+@Import(TestSecurityConfig.class)
 @WebMvcTest(ArticleCommentManagementController.class)
 class ArticleCommentManagementControllerTest {
 
