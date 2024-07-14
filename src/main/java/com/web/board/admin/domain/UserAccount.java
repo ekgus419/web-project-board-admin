@@ -2,11 +2,11 @@ package com.web.board.admin.domain;
 
 import com.web.board.admin.domain.constant.RoleType;
 import com.web.board.admin.domain.converter.RoleTypesConverter;
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Objects;

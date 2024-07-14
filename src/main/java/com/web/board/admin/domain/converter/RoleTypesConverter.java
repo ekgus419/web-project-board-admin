@@ -1,9 +1,8 @@
 package com.web.board.admin.domain.converter;
 
 import com.web.board.admin.domain.constant.RoleType;
-import jakarta.persistence.AttributeConverter;
-import jakarta.persistence.Converter;
 
+import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
