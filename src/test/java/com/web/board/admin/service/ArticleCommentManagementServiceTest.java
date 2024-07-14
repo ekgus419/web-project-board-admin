@@ -2,7 +2,6 @@ package com.web.board.admin.service;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.web.board.admin.domain.constant.RoleType;
 import com.web.board.admin.dto.ArticleCommentDto;
 import com.web.board.admin.dto.UserAccountDto;
 import com.web.board.admin.dto.properties.ProjectProperties;

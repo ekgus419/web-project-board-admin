@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-@ConfigurationPropertiesScan
+@ActiveProfiles("test")
 @SpringBootTest
 class WebProjectBoardApplicationTests {
 
