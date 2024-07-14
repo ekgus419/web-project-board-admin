@@ -2,7 +2,6 @@ package com.web.board.admin.service;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.web.board.admin.domain.constant.RoleType;
 import com.web.board.admin.dto.ArticleDto;
 import com.web.board.admin.dto.UserAccountDto;
 import com.web.board.admin.dto.properties.ProjectProperties;
@@ -46,7 +45,7 @@ class ArticleManagementServiceTest {
             this.sut = sut;
         }
 
-        @DisplayName("게시글 ID와 함께 게시글 API를 호출하면, 게시글을 가져온다.")
+        @DisplayName("게시글 API를 호출하면, 게시글을 가져온다.")
         @Test
         void givenNothing_whenCallingArticleApi_thenReturnsArticleList() {
             // Given
@@ -92,7 +91,6 @@ class ArticleManagementServiceTest {
             // Given
             ArticleDto expectedArticle = createArticleDto("제목", "글");
             ArticleClientResponse expectedResponse = ArticleClientResponse.of(List.of(expectedArticle));
-            System.out.println(projectProperties.board().url());
             server
                     .expect(requestTo(projectProperties.board().url() + "/api/articles?size=10000"))
                     .andRespond(withSuccess(
@@ -172,7 +170,6 @@ class ArticleManagementServiceTest {
         private UserAccountDto createUserAccountDto() {
             return UserAccountDto.of(
                     "unoTest",
-                    Set.of(RoleType.ADMIN),
                     "uno-test@email.com",
                     "uno-test",
                     "test memo"
