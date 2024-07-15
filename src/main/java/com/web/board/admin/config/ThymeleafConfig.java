@@ -10,7 +10,6 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 public class ThymeleafConfig {
 
     @Bean
-    @Lazy
     public SpringResourceTemplateResolver thymeleafTemplateResolver(
             SpringResourceTemplateResolver defaultTemplateResolver,
             Thymeleaf3Properties thymeleaf3Properties
