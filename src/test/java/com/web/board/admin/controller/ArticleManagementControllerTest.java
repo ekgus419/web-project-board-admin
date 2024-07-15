@@ -2,6 +2,7 @@ package com.web.board.admin.controller;
 
 
 
+import com.web.board.admin.config.GlobalControllerConfig;
 import com.web.board.admin.config.TestSecurityConfig;
 import com.web.board.admin.dto.ArticleDto;
 import com.web.board.admin.dto.UserAccountDto;
@@ -26,7 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @DisplayName("컨트롤러 - 게시글 관리")
-@Import(TestSecurityConfig.class)
+@Import({TestSecurityConfig.class, GlobalControllerConfig.class})
 @WebMvcTest(ArticleManagementController.class)
 class ArticleManagementControllerTest {
 
