@@ -29,8 +29,6 @@ public class ArticleManagementService {
                 .toUri();
         ArticleClientResponse response = restTemplate.getForObject(uri, ArticleClientResponse.class);
 
-        System.out.println("ekgus!!!");
-        System.out.println(response);
         return Optional.ofNullable(response).orElseGet(ArticleClientResponse::empty).articles();
     }
 
